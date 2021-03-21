@@ -2,17 +2,15 @@
 
 const wrapper = require('./helpers/promise-wrapper');
 
-const i18n = require('../../../../src/i18n/i18n');
-
-const slug2template = (slug) => {
-  const pureSlug = i18n.pureSlug(slug);
-  return pureSlug === '/' ? undefined : pureSlug.toString();
-};
-
 module.exports = async ({ graphql, actions, reporter }, pluginOptions) => {
   const { createPage } = actions;
 
-  const { templatesDir } = pluginOptions;
+  const { templatesDir, i18n } = pluginOptions;
+
+  const slug2template = (slug) => {
+    const pureSlug = i18n.pureSlug(slug);
+    return pureSlug === '/' ? undefined : pureSlug.toString();
+  };
   const pageDefaultTemplate = require.resolve(`${templatesDir}page.jsx`);
 
   const getTemplate = (template) => {
