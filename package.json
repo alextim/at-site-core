@@ -1,0 +1,30 @@
+{
+  "name": "@alextim/at-site-core",
+  "description": "Markdown site core: pages, nav bar menu, footer menu, social links, address, translations",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": "Oleksii Tymoshenko <buildmnt@gmail.com>",
+  "keywords": [
+    "gatsby",
+    "gatsbyjs"
+  ],
+  "main": "index.js",
+  "homepage": "https://github.com/alextim/at-site-core",
+  "repository": "git://github.com/alextim/at-site-core.git",
+  "bugs": {
+    "url": "https://github.com/alextim/at-site-core/issues"
+  },
+  "scripts": {
+    "test": "echo \"Write tests!\" && exit 0"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+  },
+  "peerDependencies": {
+    "gatsby": ">=3.1.1"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }    
+}
