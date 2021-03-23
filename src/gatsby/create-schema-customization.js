@@ -36,11 +36,6 @@ module.exports = ({ actions }) => {
     }),
    */
     `
-    type Link {
-      to: String!
-      title: String!
-    }
-    
     type Image {
       sm: File @fileByRelativePath
       xl: File @fileByRelativePath
@@ -98,27 +93,56 @@ module.exports = ({ actions }) => {
       slug: String!
     }
 
-    type Yaml implements Node @dontInfer {
-      # navItem,
-      to: String
-      title: String
+    # used in MdPost
+    # tags, category
+    type Link {
+      to: String!
+      title: String!
+    }
 
-      # translationItem
+    interface ILinkItem {
+      id: ID!      
+      to: String!
+      title: String!
+    }
+
+    type FooterNav implements ILinkItem & Node @dontInfer {
+      to: String!
+      title: String!
+      locale: String!
+    }
+
+    type MainNav implements ILinkItem & Node @dontInfer {
+      to: String!
+      title: String!
+      submenu: [Link]
+      locale: String!
+    }
+
+    type SocialLink implements ILinkItem & Node @dontInfer {
+      code: String!
+      to: String!
+      title: String!
+      locale: String!
+    }
+
+    type Translation implements Node @dontInfer {
       key: String!
       value: String!
-
-      # socialLinkItem
-      code: String!
-
-      # address
+      locale: String!
+    }
+  
+    type Address implements Node @dontInfer {
       name: String
       alternateName: String
       legalName: String
       description: String
       contactPoint: [ContactPoint]
       postalAddress: PostalAddress
+      locale: String!
+    }
 
-      # contacts
+    type Contact implements Node @dontInfer {
       organizationType: String
       phone: [String]
       voice: Voice
@@ -132,15 +156,6 @@ module.exports = ({ actions }) => {
       priceRange: String
       currenciesAccepted: String
       paymentAccepted: String
-
-      fields: YamlFields
-    }
-
-    type YamlFields {
-      locale: String
-      type: String
-      to: String
-      submenu: [NavItem]
     }
 
     type ContactPoint {
@@ -150,11 +165,6 @@ module.exports = ({ actions }) => {
       telephone: [String]
       email: [String]
       areaServed: String
-    }
-
-    type NavItem {
-      to: String
-      title: String!
     }
 
     type PostalAddress {

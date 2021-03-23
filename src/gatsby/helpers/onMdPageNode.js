@@ -1,7 +1,7 @@
 const extractData = require('./extractData');
 
 const onMdPageNode = (
-  { node, actions, getNode, createNodeId, createContentDigest },
+  { node, actions: { createNode, createParentChildLink }, getNode, createNodeId, createContentDigest },
   i18n,
   type,
   fields = {},
@@ -12,8 +12,6 @@ const onMdPageNode = (
   }
 
   const { slug, locale, frontmatter } = result;
-
-  const { createNode, createParentChildLink } = actions;
 
   const {
     title,
