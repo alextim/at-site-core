@@ -63,7 +63,7 @@ module.exports = ({ actions }) => {
     interface Page implements Node {
       id: ID!
       title: String!
-      description: String
+      headline: String
       metaTitle: String
       metaDescription: String
       cover: Image
@@ -79,7 +79,7 @@ module.exports = ({ actions }) => {
 
     type MdPage implements Page & Node @dontInfer {
       title: String!
-      description: String
+      headline: String
       metaTitle: String
       metaDescription: String
       cover: Image

@@ -15,7 +15,7 @@ const onMdPageNode = (
 
   const {
     title,
-    description,
+    headline,
     metaTitle,
     metaDescription,
     cover,
@@ -28,9 +28,9 @@ const onMdPageNode = (
 
   const fieldData = {
     title,
-    description,
+    headline,
     metaTitle: metaTitle || title,
-    metaDescription: metaDescription || description,
+    metaDescription: metaDescription || headline,
     cover,
     sections,
     html,
@@ -77,7 +77,7 @@ const onMdPageNode = (
   };
   */
   //    metaTitle: getMetaTitle(title, metaTitle, slug),
-  //    metaDescription: metaDescription || description || i18n.locales[locale].siteDescription,
+  //    metaDescription: metaDescription || headline || i18n.locales[locale].siteDescription,
 };
 
 module.exports = onMdPageNode;
