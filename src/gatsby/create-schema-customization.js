@@ -69,6 +69,8 @@ module.exports = ({ actions }) => {
       cover: Image
       template: String
       noindex: Boolean
+      datePublished: Date
+      dateModified: Date,
       sections: [Section]
       html: String!
       htmlAst: JSON!
@@ -85,6 +87,8 @@ module.exports = ({ actions }) => {
       cover: Image
       template: String
       noindex: Boolean
+      datePublished: Date
+      dateModified: Date,
       sections: [Section]
       html: String! @mdpassthrough(fieldName: "html")
       htmlAst: JSON! @mdpassthrough(fieldName: "htmlAst")
