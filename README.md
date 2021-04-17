@@ -13,4 +13,4 @@ It generates:
 |---             |---                | ---
 | pageDirs       | { page: 'pages' } |
 | i18n           | REQUIRED: object  |
-| noIndex        | false             | if true force `noindex` field to true
+| noIndex        | true              | if true force `noindex` field to true
