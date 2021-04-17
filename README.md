@@ -9,7 +9,8 @@ It generates:
 
 ## Plugin options
 
-| Name           | Default value
-|---             |---
-| pageDirs       | { page: 'pages' }
-| i18n           | REQUIRED: object
+| Name           | Default value     | Note
+|---             |---                | ---
+| pageDirs       | { page: 'pages' } |
+| i18n           | REQUIRED: object  |
+| noIndex        | false             | if true force `noindex` field to true

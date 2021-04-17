@@ -3,6 +3,7 @@ const extractData = require('./extractData');
 const onMdPageNode = (
   { node, actions: { createNode, createParentChildLink }, getNode, createNodeId, createContentDigest },
   i18n,
+  noIndex,
   type,
   fields = {},
 ) => {
@@ -34,7 +35,7 @@ const onMdPageNode = (
     cover,
     datePublished,
     dateModified,
-    noindex,
+    noindex: noIndex || noindex,
     template,
     sections,
     locale,
