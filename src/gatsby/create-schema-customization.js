@@ -177,11 +177,12 @@ module.exports = ({ actions }) => {
       addressRegion: String
       postalCode: String
       addressCountry: String
+      addressCountryName: String
     }
 
     type Geo {
-      latitude: String!
-      longitude: String!
+      latitude: Float!
+      longitude: Float!
     }
 
     type Voice {
