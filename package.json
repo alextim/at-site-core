@@ -1,7 +1,7 @@
 {
   "name": "@alextim/at-site-core",
   "description": "Markdown site core: pages, nav bar menu, footer menu, social links, address, translations",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "license": "MIT",
   "author": "Oleksii Tymoshenko <buildmnt@gmail.com>",
   "keywords": [
@@ -20,7 +20,7 @@
   "dependencies": {},
   "devDependencies": {},
   "peerDependencies": {
-    "gatsby": ">=3.2.1"
+    "gatsby": ">=3.3.1"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"

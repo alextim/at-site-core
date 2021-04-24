@@ -175,7 +175,7 @@ module.exports = ({ actions }) => {
       streetAddress: [String]
       addressLocality: String
       addressRegion: String
-      postalCode: Int
+      postalCode: String
       addressCountry: String
     }
 
