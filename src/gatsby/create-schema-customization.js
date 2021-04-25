@@ -166,6 +166,7 @@ module.exports = ({ actions }) => {
       name: String
       description: String
       contactType: String
+      contactTypeName: String
       telephone: [String]
       email: [String]
       areaServed: String
